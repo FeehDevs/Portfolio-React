@@ -73,7 +73,7 @@ const projects: ProjectData[] = [
       "Containerização com Docker",
       "Estruturação de sistemas maiores",
     ],
-    note: "Projeto desenvolvido em ambiente privado por conter dados de uma empresa real. Disponível para demonstração mediante solicitação.",
+    githubUrl: "#",
     status: "Em evolução",
     statusColor: "hsl(250 80% 65%)",
     visual: "acrylic-api",
