@@ -1,4 +1,4 @@
-import { SiPhp, SiPostgresql, SiDocker, SiHtml5, SiCss3, SiJavascript, SiPython, SiFlask, SiReact, SiPostman, SiSqlalchemy } from "react-icons/si";
+import { SiPhp, SiPostgresql, SiDocker, SiHtml5, SiCss, SiJavascript, SiPython, SiFlask, SiReact, SiPostman, SiSqlalchemy } from "react-icons/si";
 import { type ReactNode } from "react";
 
 interface TechInfo {
@@ -24,7 +24,7 @@ export const techMap: Record<string, TechInfo> = {
     url: "https://developer.mozilla.org/pt-BR/docs/Web/HTML",
   },
   "CSS": {
-    icon: <SiCss3 className="w-3.5 h-3.5" />,
+    icon: <SiCss className="w-3.5 h-3.5" />,
     url: "https://developer.mozilla.org/pt-BR/docs/Web/CSS",
   },
   "JavaScript": {
