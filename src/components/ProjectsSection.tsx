@@ -83,7 +83,7 @@ const projects: ProjectData[] = [
 const AuthApiMock = () => (
   <div className="rounded-xl bg-background/60 border border-border p-4 text-xs font-mono space-y-3 overflow-hidden">
     <div className="flex items-center gap-2 text-muted-foreground mb-1">
-      <span className="w-2 h-2 rounded-full bg-green-500" />
+      <span className="w-2 h-2 rounded-full" style={{ background: "hsl(142 71% 45%)" }} />
       <span>POST /api/auth</span>
     </div>
     <div className="space-y-1.5 text-muted-foreground">
@@ -98,13 +98,13 @@ const AuthApiMock = () => (
       <div>{"}"}</div>
     </div>
     <div className="border-t border-border pt-3 space-y-1.5 text-muted-foreground">
-      <div className="text-green-400/70">{"// Response 200"}</div>
+      <div style={{ color: "hsl(142 71% 65% / 0.7)" }}>{"// Response 200"}</div>
       <div>{"{"}</div>
       <div className="pl-4">
-        <span className="text-green-400">"token"</span>: "eyJhbGci..."
+        <span style={{ color: "hsl(142 71% 65%)" }}>"token"</span>: "eyJhbGci..."
       </div>
       <div className="pl-4">
-        <span className="text-green-400">"user"</span>: {"{ "}id, name{" }"}
+        <span style={{ color: "hsl(142 71% 65%)" }}>"user"</span>: {"{ "}id, name{" }"}
       </div>
       <div>{"}"}</div>
     </div>
@@ -114,7 +114,7 @@ const AuthApiMock = () => (
 const AcrylicApiMock = () => (
   <div className="rounded-xl bg-background/60 border border-border p-4 text-xs font-mono space-y-3 overflow-hidden">
     <div className="flex items-center gap-2 text-muted-foreground mb-1">
-      <span className="w-2 h-2 rounded-full bg-blue-400" />
+      <span className="w-2 h-2 rounded-full" style={{ background: "hsl(var(--primary))" }} />
       <span>GET /api/pedidos</span>
     </div>
     <div className="space-y-1.5 text-muted-foreground">
