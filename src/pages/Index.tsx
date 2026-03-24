@@ -3,10 +3,12 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
+import BackgroundEffects from "@/components/BackgroundEffects";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <BackgroundEffects />
       <Navbar />
       <HeroSection />
       <AboutSection />

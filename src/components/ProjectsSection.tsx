@@ -1,4 +1,5 @@
 import ProjectCard from "./ProjectCard";
+import AnimatedSection from "./AnimatedSection";
 
 const projects = [
   {
@@ -47,12 +48,16 @@ const ProjectsSection = () => {
   return (
     <section id="projetos" className="py-24 px-6">
       <div className="container max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold mb-10">
-          Meus <span className="text-gradient">projetos</span>
-        </h2>
+        <AnimatedSection>
+          <h2 className="text-3xl font-bold mb-10">
+            Meus <span className="text-gradient">projetos</span>
+          </h2>
+        </AnimatedSection>
         <div className="space-y-8">
-          {projects.map((p) => (
-            <ProjectCard key={p.title} {...p} />
+          {projects.map((p, i) => (
+            <AnimatedSection key={p.title} delay={0.1 * (i + 1)}>
+              <ProjectCard {...p} />
+            </AnimatedSection>
           ))}
         </div>
       </div>
