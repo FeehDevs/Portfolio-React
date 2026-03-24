@@ -41,7 +41,7 @@ const ContactSection = () => {
               <Mail className="w-4 h-4" /> Email
             </a>
             <a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5511958273689"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-secondary border border-border text-secondary-foreground text-sm font-medium transition-all duration-300 hover:border-primary/30 hover:shadow-[0_0_20px_-5px_hsl(var(--primary)/0.2)]"
