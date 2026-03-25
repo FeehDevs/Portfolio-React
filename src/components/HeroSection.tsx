@@ -65,7 +65,7 @@ const HeroSection = () => {
           className="flex items-center justify-center gap-3 pt-2"
         >
           <a
-            href="#"
+            href="https://www.linkedin.com/in/fsilvagoncalves/"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 border border-primary/30 bg-primary/10 text-primary hover:bg-primary/20 hover:border-primary/50 hover:shadow-[0_0_20px_-5px_hsl(var(--primary)/0.3)]"
@@ -74,7 +74,7 @@ const HeroSection = () => {
             LinkedIn
           </a>
           <a
-            href="#"
+            href="https://github.com/FeehDevs"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 border border-border bg-secondary text-secondary-foreground hover:border-primary/30 hover:bg-secondary/80 hover:shadow-[0_0_20px_-5px_hsl(var(--primary)/0.2)]"
