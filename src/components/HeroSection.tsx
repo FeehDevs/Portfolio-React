@@ -16,7 +16,7 @@ const HeroSection = () => {
         style={{ background: "hsl(var(--primary))" }}
       />
 
-      <div className="max-w-2xl space-y-6 relative z-10">
+      <div className="max-w-2xl space-y-6 relative z-10 flex flex-col items-center">
         <motion.h1
           initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -73,6 +73,7 @@ const HeroSection = () => {
             <FaLinkedin className="w-4 h-4" />
             LinkedIn
           </a>
+
           <a
             href="https://github.com/FeehDevs"
             target="_blank"
@@ -83,19 +84,19 @@ const HeroSection = () => {
             GitHub
           </a>
         </motion.div>
-      </div>
 
-      <motion.button
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.6 }}
-        onClick={scrollToProjects}
-        className="absolute bottom-12 flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300 cursor-pointer"
-        aria-label="Ir para projetos"
-      >
-        <span className="text-sm font-medium">Ver projetos</span>
-        <ArrowDown className="w-5 h-5 animate-bounce" />
-      </motion.button>
+        <motion.button
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          onClick={scrollToProjects}
+          className="mt-12 flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300 cursor-pointer"
+          aria-label="Ir para projetos"
+        >
+          <span className="text-sm font-medium">Ver projetos</span>
+          <ArrowDown className="w-5 h-5 animate-bounce" />
+        </motion.button>
+      </div>
     </section>
   );
 };
