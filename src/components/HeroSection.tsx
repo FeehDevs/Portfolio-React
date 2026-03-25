@@ -1,5 +1,7 @@
-import { ArrowDown, Linkedin, Github } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa6";
 
 const HeroSection = () => {
   const scrollToProjects = () => {
@@ -68,7 +70,7 @@ const HeroSection = () => {
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 border border-primary/30 bg-primary/10 text-primary hover:bg-primary/20 hover:border-primary/50 hover:shadow-[0_0_20px_-5px_hsl(var(--primary)/0.3)]"
           >
-            <Linkedin className="w-4 h-4" />
+            <FaLinkedin className="w-4 h-4" />
             LinkedIn
           </a>
           <a
@@ -77,7 +79,7 @@ const HeroSection = () => {
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 border border-border bg-secondary text-secondary-foreground hover:border-primary/30 hover:bg-secondary/80 hover:shadow-[0_0_20px_-5px_hsl(var(--primary)/0.2)]"
           >
-            <Github className="w-4 h-4" />
+            <FaGithub className="w-4 h-4" />
             GitHub
           </a>
         </motion.div>

@@ -1,4 +1,4 @@
-import { Linkedin, Github, Mail, MessageCircle } from "lucide-react";
+import { FiGithub, FiLinkedin, FiMail, FiMessageCircle } from "react-icons/fi";
 import AnimatedSection from "./AnimatedSection";
 
 const ContactSection = () => {
@@ -22,7 +22,7 @@ const ContactSection = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-secondary border border-border text-secondary-foreground text-sm font-medium transition-all duration-300 hover:border-primary/30 hover:shadow-[0_0_20px_-5px_hsl(var(--primary)/0.2)]"
             >
-              <Linkedin className="w-4 h-4" /> LinkedIn
+              <FiLinkedin className="w-4 h-4" /> LinkedIn
             </a>
             <a
               href="#"
@@ -30,7 +30,7 @@ const ContactSection = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-secondary border border-border text-secondary-foreground text-sm font-medium transition-all duration-300 hover:border-primary/30 hover:shadow-[0_0_20px_-5px_hsl(var(--primary)/0.2)]"
             >
-              <Github className="w-4 h-4" /> GitHub
+              <FiGithub className="w-4 h-4" /> GitHub
             </a>
             <a
               href="mailto:seuemail@gmail.com"
@@ -38,7 +38,7 @@ const ContactSection = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-secondary border border-border text-secondary-foreground text-sm font-medium transition-all duration-300 hover:border-primary/30 hover:shadow-[0_0_20px_-5px_hsl(var(--primary)/0.2)]"
             >
-              <Mail className="w-4 h-4" /> Gmail
+              <FiMail className="w-4 h-4" /> Gmail
             </a>
             <a
               href="https://wa.me/5511999999999"
@@ -46,7 +46,7 @@ const ContactSection = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-secondary border border-border text-secondary-foreground text-sm font-medium transition-all duration-300 hover:border-primary/30 hover:shadow-[0_0_20px_-5px_hsl(var(--primary)/0.2)]"
             >
-              <MessageCircle className="w-4 h-4" /> WhatsApp
+              <FiMessageCircle className="w-4 h-4" /> WhatsApp
             </a>
           </div>
         </AnimatedSection>
