@@ -2,6 +2,8 @@
 
 Este repositório contém meu portfólio como desenvolvedor backend em formação, apresentando projetos práticos focados na construção de aplicações reais, desde a estruturação até a integração com banco de dados.
 
+![Preview do Portfólio](./git/image/preview.png)
+
 ---
 
 ## 👨‍💻 Sobre mim
