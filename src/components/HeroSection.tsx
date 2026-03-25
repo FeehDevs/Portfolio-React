@@ -1,5 +1,7 @@
-import { ArrowDown, Linkedin, Github } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa6";
 
 const HeroSection = () => {
   const scrollToProjects = () => {
@@ -14,7 +16,7 @@ const HeroSection = () => {
         style={{ background: "hsl(var(--primary))" }}
       />
 
-      <div className="max-w-2xl space-y-6 relative z-10">
+      <div className="max-w-2xl space-y-6 relative z-10 flex flex-col items-center">
         <motion.h1
           initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -63,37 +65,38 @@ const HeroSection = () => {
           className="flex items-center justify-center gap-3 pt-2"
         >
           <a
-            href="#"
+            href="https://www.linkedin.com/in/fsilvagoncalves/"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 border border-primary/30 bg-primary/10 text-primary hover:bg-primary/20 hover:border-primary/50 hover:shadow-[0_0_20px_-5px_hsl(var(--primary)/0.3)]"
           >
-            <Linkedin className="w-4 h-4" />
+            <FaLinkedin className="w-4 h-4" />
             LinkedIn
           </a>
+
           <a
-            href="#"
+            href="https://github.com/FeehDevs"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 border border-border bg-secondary text-secondary-foreground hover:border-primary/30 hover:bg-secondary/80 hover:shadow-[0_0_20px_-5px_hsl(var(--primary)/0.2)]"
           >
-            <Github className="w-4 h-4" />
+            <FaGithub className="w-4 h-4" />
             GitHub
           </a>
         </motion.div>
-      </div>
 
-      <motion.button
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.6 }}
-        onClick={scrollToProjects}
-        className="absolute bottom-12 flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300 cursor-pointer"
-        aria-label="Ir para projetos"
-      >
-        <span className="text-sm font-medium">Ver projetos</span>
-        <ArrowDown className="w-5 h-5 animate-bounce" />
-      </motion.button>
+        <motion.button
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          onClick={scrollToProjects}
+          className="mt-12 flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300 cursor-pointer"
+          aria-label="Ir para projetos"
+        >
+          <span className="text-sm font-medium">Ver projetos</span>
+          <ArrowDown className="w-5 h-5 animate-bounce" />
+        </motion.button>
+      </div>
     </section>
   );
 };

@@ -8,6 +8,13 @@ interface TechGroup {
   techs: string[];
 }
 
+interface ProjetoInfo {
+  url: string;
+  status: string;
+  statusColor: string;
+  visual: "auth-api" | "acrylic-api";
+}
+
 interface ProjectData {
   title: string;
   subtitle: string;
@@ -16,11 +23,8 @@ interface ProjectData {
   techGroups: TechGroup[];
   features: string[];
   learnings: string[];
-  githubUrl?: string;
+  projetos: ProjetoInfo[];
   note?: string;
-  status: string;
-  statusColor: string;
-  visual: "auth-api" | "acrylic-api";
 }
 
 const projects: ProjectData[] = [
@@ -46,10 +50,14 @@ const projects: ProjectData[] = [
       "Integração segura via PDO",
       "Boas práticas de autenticação",
     ],
-    githubUrl: "#",
-    status: "Funcional",
-    statusColor: "hsl(var(--primary))",
-    visual: "auth-api",
+        projetos: [
+      {
+        url: "https://github.com/FeehDevs/php-auth-system",
+        status: "Funcional",
+        statusColor: "hsl(var(--primary))",
+        visual: "auth-api",
+      },
+    ],
   },
   {
     title: "Sistema de Gestão — Loja de Acrílicos",
@@ -73,10 +81,15 @@ const projects: ProjectData[] = [
       "Containerização com Docker",
       "Estruturação de sistemas maiores",
     ],
-    githubUrl: "#",
-    status: "Em evolução",
-    statusColor: "hsl(250 80% 65%)",
-    visual: "acrylic-api",
+    projetos: [
+      {
+        url: "https://github.com/CommitCreww/acrilico_dashboard",
+        status: "Funcional",
+        statusColor: "hsl(var(--primary))",
+        visual: "acrylic-api",
+      }
+    ],
+
   },
 ];
 
@@ -169,16 +182,18 @@ const ProjectsSection = () => {
                   {/* Header */}
                   <div className="flex flex-wrap items-center gap-3 mb-1">
                     <h3 className="text-xl font-bold">{p.title}</h3>
-                    <span
-                      className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full border"
-                      style={{
-                        color: p.statusColor,
-                        borderColor: `${p.statusColor}40`,
-                        backgroundColor: `${p.statusColor}10`,
-                      }}
-                    >
-                      {p.status}
-                    </span>
+                    {p.projetos[0] && (
+                      <span
+                        className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full border"
+                        style={{
+                          color: p.projetos[0].statusColor,
+                          borderColor: `${p.projetos[0].statusColor}40`,
+                          backgroundColor: `${p.projetos[0].statusColor}10`,
+                        }}
+                      >
+                        {p.projetos[0].status}
+                      </span>
+                    )}
                   </div>
                   <p className="text-xs text-muted-foreground font-medium mb-3 tracking-wide">
                     {p.subtitle}
@@ -227,7 +242,7 @@ const ProjectsSection = () => {
 
                     {/* Visual */}
                     <div className={isReversed ? "lg:order-1" : ""}>
-                      <ProjectVisual type={p.visual} />
+                      {p.projetos[0] && <ProjectVisual type={p.projetos[0].visual} />}
 
                       {/* Tech groups */}
                       <div className="mt-4 grid grid-cols-2 gap-3">
@@ -278,9 +293,10 @@ const ProjectsSection = () => {
                     )}
 
                     <div className="flex items-center gap-3">
-                      {p.githubUrl && (
+                     {p.projetos.map((proj, idx) => (
                         <a
-                          href={p.githubUrl}
+                          key={idx}
+                          href={proj.url}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 border border-primary/30 bg-primary/10 text-primary hover:bg-primary/20 hover:border-primary/50 hover:shadow-[0_0_16px_-4px_hsl(var(--primary)/0.25)]"
@@ -289,12 +305,7 @@ const ProjectsSection = () => {
                           Ver código no GitHub
                           <ArrowRight className="w-3.5 h-3.5" />
                         </a>
-                      )}
-                      {!p.githubUrl && !p.note && (
-                        <span className="text-xs text-muted-foreground italic">
-                          Demonstração disponível mediante solicitação
-                        </span>
-                      )}
+                      ))}
                     </div>
                   </div>
                 </motion.div>
