@@ -4,6 +4,9 @@ Este repositório contém meu portfólio como desenvolvedor backend em formaçã
 
 ![Preview do Portfólio](./git/image/preview.png)
 
+
+🔗 **Acesse o portfólio:** https://portfolio-react-woad-one.vercel.app/
+
 ---
 
 ## 👨‍💻 Sobre mim
